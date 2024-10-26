@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    const int slices_per_pizza = 8;
     int guests, pizzas;
     cout << "Podaj liczbę gosci: ";
     cin >> guests;
@@ -9,7 +10,7 @@ int main()
     cout << "Podaj liczbę placków pizzy: ";
     cin >> pizzas;
     cout << endl;
-    int pieces = 8*pizzas;
+    int pieces = slices_per_pizza*pizzas;
     if ((pieces)<guests) {
         cout << "Za mało pizzy względem liczby gości!";
     }
