@@ -2,18 +2,21 @@
 using namespace std;
 int main()
 {
-    int guests, pizzas;
+    int guests, pizzas, pieces, guest_pieces, host_pieces;
     cout << "Podaj liczbę gosci: ";
     cin >> guests;
     cout << endl;
     cout << "Podaj liczbę placków pizzy: ";
     cin >> pizzas;
     cout << endl;
-    if ((pizzas*8)<guests) {
+    pieces = 8*pizzas;
+    if ((pieces)<guests) {
         cout << "Za mało pizzy względem liczby gości!";
     }
     else {
-        cout << "Każdy otrzyma " << pizzas*8/guests << " kawałków (kawałki), dla organizatora zostanie " << (pizzas*8)%guests << " kawałków (kawałki)";
+        guest_pieces = pieces/guests;
+        host_pieces = pieces%guests;
+        cout << "Każdy otrzyma " << guest_pieces << " kawałków (kawałki), dla organizatora zostanie " << host_pieces << " kawałków (kawałki)";
 
     }
 
